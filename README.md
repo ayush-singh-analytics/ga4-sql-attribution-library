@@ -13,6 +13,7 @@ and structured around real attribution business problems.
 | 03 | Classify purchases into Paid / Organic / Direct / Other | CASE WHEN · conditional classification | 56% of purchases unclassified — attribution gap identified |
 | 04 | Which channel converts sessions into purchases most efficiently? | CTEs · JOIN · conversion rate | Paid search converts at 0.73% — lowest of all channels despite direct cost |
 | 05 | How are purchases trending week over week per channel? | Window functions · LAG() · PARTITION BY | Other channel grew +63 in week 4 before sharp end-of-month drop |
+| 06 | Which channels are under-credited by GA4's last-click model? | FIRST_VALUE · LAST_VALUE · INNER JOIN · multi-CTE pipeline | Paid search started 23 user journeys that GA4 attributed entirely to other channels |
 
 ## Stack
 BigQuery · GA4 Raw Export · Standard SQL
